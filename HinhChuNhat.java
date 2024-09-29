@@ -1,14 +1,19 @@
 package demoHinhHoc;
 
 public class HinhChuNhat extends HinhHoc {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int chieuDai;
 	private int chieuRong;
 
 	public HinhChuNhat() {
-
+		super();
 	}
 
-	public HinhChuNhat(int chieuDai, int chieuRong) {
+	public HinhChuNhat(int id, int chieuDai, int chieuRong) {
+		super(id);
 		this.chieuDai = chieuDai;
 		this.chieuRong = chieuRong;
 	}
@@ -26,8 +31,8 @@ public class HinhChuNhat extends HinhHoc {
 
 	@Override
 	public String toString() {
-		return "Chieu dai: " + chieuDai + ", Chieu rong: " + chieuRong + ", Chu vi: " + this.tinhChuVi()
-				+ ", Dien tich: " + this.tinhDienTich();
+		return super.toString() + ", HinhChuNhat [Chieu Dai = " + chieuDai + ", Chieu Rong = " + chieuRong
+				+ ", Chu vi = " + tinhChuVi() + ", Dien Tich = " + tinhDienTich() + "]";
 	}
 
 }

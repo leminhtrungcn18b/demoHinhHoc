@@ -1,6 +1,10 @@
 package demoHinhHoc;
 
 public class HinhTron extends HinhHoc {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private static double numberPi = 3.14;
 	private int banKinh;
 
@@ -8,7 +12,8 @@ public class HinhTron extends HinhHoc {
 
 	}
 
-	public HinhTron(int banKinh) {
+	public HinhTron(int id, int banKinh) {
+		super();
 		this.banKinh = banKinh;
 	}
 
@@ -24,6 +29,8 @@ public class HinhTron extends HinhHoc {
 
 	@Override
 	public String toString() {
-		return "Ban kinh: " + banKinh + ", Chu vi: " + this.tinhChuVi() + ", Dien tich: " + this.tinhDienTich();
+		return "ID: " + super.getId() + ",HinhTron [Ban Kinh = " + banKinh + ", ChuVi = " + tinhChuVi()
+				+ ", DienTich = " + tinhDienTich() + "]";
 	}
+
 }
